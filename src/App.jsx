@@ -1,4 +1,5 @@
 
+import Footer from "./component/Footer";
 import Home from "./pages/Home";
 
 
@@ -9,6 +10,7 @@ function App() {
     <>
     
       <Home/>
+      <Footer/>
     </>
   );
 }
