@@ -1,4 +1,5 @@
 
+import Card from "./component/Card";
 import Footer from "./component/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -12,9 +13,10 @@ function App() {
     <>
     
       <Home/>
-      <Footer/>
-      <Register/>
-      <Login/>
+      {/* <Register/>
+      <Login/> */}
+
+    
     </>
   );
 }
