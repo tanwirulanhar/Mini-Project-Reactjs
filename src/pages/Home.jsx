@@ -5,6 +5,8 @@ import Card from "../component/Card";
 import Footer from "../component/Footer";
 
 const Home = () => {
+  
+
   return (
     <div>
       <div className=" w-100% h-800 bg-[url('./assets/bg-1.jpg')] bg-cover">
@@ -16,11 +18,17 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="my-32 w-444">
+      <div className="mt-32 w-444 ">
         <div className="pb-10 text-center">
-          <h1 className="font-sans text-5xl font-bold">Our Mentor</h1>
+          <h1 className="font-sans text-5xl font-bold">
+            <span className="text-yellow-700">Our</span>{" "}
+            <span className="text-cyan-800">Mentor</span>
+          </h1>
         </div>
-        <Card />
+        <div >
+          <Card />
+          
+        </div>
       </div>
 
       <div>
