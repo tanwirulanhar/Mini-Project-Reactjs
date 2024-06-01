@@ -19,7 +19,7 @@ const NavbarLogin = () => {
   return (
     <>
       <div className="flex justify-between px-24 py-8 ">
-        <Link to="/">
+        <Link to="/homeLogin">
           <div className="w-56 h-12 ">
             <img src={image} alt="logo" />
           </div>

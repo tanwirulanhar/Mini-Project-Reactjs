@@ -9,8 +9,6 @@ const CardLogin = () => {
     page: 1,
   });
 
-
-
   const datalistUser = () => {
     axios
       .get(`https://reqres.in/api/users?page=${pagination.page}`)
@@ -39,12 +37,10 @@ const CardLogin = () => {
     datalistUser();
   }, []);
 
-  //useEffect button
   useEffect(() => {
     datalistUser();
   }, [pagination?.page]);
 
-  //function button
   const handleNext = () => {
     setPagination({
       ...pagination,
@@ -61,21 +57,20 @@ const CardLogin = () => {
 
   return (
     <div>
-      <div 
-        className="flex justify-center gap-10 mx-10 my-10 "
-      >
+      <div className="flex flex-wrap justify-center gap-6 mx-4 my-8">
         {listUser.map((item) => (
-          <Link to={`/user/${item?.id}`}
+          <Link
+            to={`/user/${item?.id}`}
             key={item.id}
-            className="pt-0 duration-300 rounded-lg shadow-2xl cursor-pointer border-inherit w-72 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
+            className="flex flex-col items-center duration-300 rounded-lg shadow-2xl cursor-pointer w-72 hover:-translate-y-1 hover:scale-105 hover:bg-indigo-500"
           >
             <img
-              className="rounded-t-lg h-60 w-72"
+              className="object-cover w-full rounded-t-lg h-60"
               src={item?.avatar}
               alt="img"
             />
-            <div className="px-5 py-5 font-sans text-white rounded-b-lg bg-cyan-800">
-              <h1 className="text-2xl text-center">
+            <div className="w-full px-4 py-4 font-sans text-white rounded-b-lg bg-cyan-800">
+              <h1 className="mb-2 text-2xl text-center">
                 {item?.first_name} {item?.last_name}
               </h1>
               <h1 className="text-base text-center">{item?.email}</h1>
@@ -84,15 +79,13 @@ const CardLogin = () => {
         ))}
       </div>
 
-      
-      <div className="flex items-center justify-center gap-4 mb-36">
-        <Button onClick={handleBack} className="">
+      <div className="flex justify-center gap-4 mt-8 mb-32">
+        <Button onClick={handleBack} disabled={pagination.page === 1}>
           Back
         </Button>
         <Button
           onClick={handleNext}
           disabled={pagination.page >= pagination.total_pages}
-          className=""
         >
           Next
         </Button>
@@ -102,3 +95,7 @@ const CardLogin = () => {
 };
 
 export default CardLogin;
+
+
+
+

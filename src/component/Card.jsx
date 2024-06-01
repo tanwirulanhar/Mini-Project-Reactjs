@@ -12,24 +12,17 @@ const Card = () => {
     alert("Silahkan login atau Register terlebih dahulu.");
   };
 
-  const datalistUser = () => {
+  const fetchData = (pageNumber) => {
     axios
-      .get(`https://reqres.in/api/users?page=${pagination.page}`)
+      .get(`https://reqres.in/api/users?page=${pageNumber}`)
       .then((res) => {
-        console.log(res?.data.data);
-
         setListUser(res?.data.data);
-
-        // data button
-        const pagination = {
+        setPagination({
           total: res?.data.total,
           page: res?.data.page,
           per_page: res?.data.per_page,
           total_pages: res?.data.total_pages,
-        };
-
-        console.log(pagination);
-        setPagination(pagination);
+        });
       })
       .catch((err) => {
         console.log(err.response);
@@ -37,64 +30,54 @@ const Card = () => {
   };
 
   useEffect(() => {
-    datalistUser();
-  }, []);
+    fetchData(pagination.page);
+  }, [pagination.page]);
 
-  //useEffect button
-  useEffect(() => {
-    datalistUser();
-  }, [pagination?.page]);
-
-  //function button
   const handleNext = () => {
-    setPagination({
-      ...pagination,
-      page: pagination?.page + 1,
-    });
+    setPagination((prevPagination) => ({
+      ...prevPagination,
+      page: prevPagination.page + 1,
+    }));
   };
 
   const handleBack = () => {
-    setPagination({
-      ...pagination,
-      page: pagination?.page - 1,
-    });
+    setPagination((prevPagination) => ({
+      ...prevPagination,
+      page: prevPagination.page - 1,
+    }));
   };
 
   return (
     <div>
-      <div
-        className="flex justify-center gap-10 mx-10 my-10 "
-        onClick={cardClick}
-      >
+      <div className="flex flex-wrap justify-center gap-6 mx-4 my-8">
         {listUser.map((item) => (
           <div
             key={item.id}
-            className="pt-0 rounded-lg shadow-2xl cursor-pointer border-inherit w-72 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+            className="w-full overflow-hidden transition duration-300 border border-gray-200 rounded-lg cursor-pointer md:w-72 hover:shadow-lg hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
+            onClick={cardClick}
           >
             <img
-              className="rounded-t-lg h-60 w-72"
+              className="object-cover w-full h-60"
               src={item?.avatar}
-              alt="img"
+              alt="Avatar"
             />
-            <div className="px-5 py-5 font-sans text-white rounded-b-lg bg-cyan-800">
-              <h1 className="text-2xl text-center">
+            <div className="p-4 text-white bg-cyan-800">
+              <h1 className="text-lg font-semibold text-center">
                 {item?.first_name} {item?.last_name}
               </h1>
-              <h1 className="text-base text-center">{item?.email}</h1>
+              <p className="mt-1 text-sm text-center">{item?.email}</p>
             </div>
           </div>
         ))}
       </div>
 
-      
-      <div className="gap-4 flex justify-center items-center mb-36">
-        <Button onClick={handleBack} className="">
+      <div className="flex justify-center space-x-4 mb-36">
+        <Button onClick={handleBack} disabled={pagination.page === 1}>
           Back
         </Button>
         <Button
           onClick={handleNext}
           disabled={pagination.page >= pagination.total_pages}
-          className=""
         >
           Next
         </Button>
@@ -104,3 +87,6 @@ const Card = () => {
 };
 
 export default Card;
+
+
+

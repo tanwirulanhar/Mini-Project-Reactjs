@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   const handleLogin = async (event) => {
-    event.preventDefault(); // ini untuk mencegah perilaku default (submit)
+    event.preventDefault(); // Prevent default behavior (submit)
 
     const payload = {
       email: email,
@@ -30,46 +30,44 @@ const Login = () => {
     try {
       const response = await axios.post("https://reqres.in/api/login", payload);
       console.log(response);
-      setError(null); // Bersihkan error jika login berhasil
- 
+      setError(null); // Clear error if login successful
 
-      setTimeout (() => {
-          navigate("/homeLogin");
+      setTimeout(() => {
+        navigate("/homeLogin");
       }, 2000);
-
     } catch (error) {
       console.log(error.response);
-      setError(error.response.data.error); 
+      setError(error.response.data.error);
     }
   };
 
   return (
     <div>
-      <div className="border bg-cyan-900 h-28">
+      <div className="bg-cyan-900">
         <Navbar />
       </div>
-      <div className="mt-32 w-600 ml-420">
-        <h1 className="text-4xl font-bold text-center mb-14">Welcome Back!</h1>
-        <form className="flex flex-col mb-32 " action="">
+      <div className="max-w-screen-md px-4 mx-auto my-40">
+        <h1 className="mb-10 text-4xl font-bold text-center">Welcome Back!</h1>
+        <form className="mb-10">
           <input
             onChange={handleChangeEmail}
-            className="pl-4 mb-8 border-2 border-black rounded-lg h-9 w-600"
+            className="w-full h-12 pl-4 mb-6 border-2 border-black rounded-lg"
             type="email"
             name="email"
             placeholder="Email"
           />
           <input
             onChange={handleChangePassword}
-            className="pl-4 mb-8 border-2 border-black rounded-lg h-9 w-600"
+            className="w-full h-12 pl-4 mb-6 border-2 border-black rounded-lg"
             type="password"
             name="password"
             placeholder="Password"
           />
 
-          {error && <div className="text-red-500  mb-8" >{error}</div>}
+          {error && <div className="mb-6 text-red-500">{error}</div>}
           <button
             onClick={handleLogin}
-            className="h-10 font-bold text-center text-white bg-cyan-800 w-600 rounded-2xl"
+            className="w-full h-10 font-bold text-center text-white rounded-lg bg-cyan-800"
           >
             Sign In
           </button>
@@ -82,3 +80,5 @@ const Login = () => {
 };
 
 export default Login;
+
+
