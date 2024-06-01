@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [token, setToken] = useState(null);
 
   const navigate = useNavigate();
 
@@ -31,6 +32,11 @@ const Login = () => {
       const response = await axios.post("https://reqres.in/api/login", payload);
       console.log(response);
       setError(null); // Clear error if login successful
+
+      const token = response.data.token;
+      console.log(token);
+      setToken(token);
+      localStorage.setItem('acces_token', token)
 
       setTimeout(() => {
         navigate("/homeLogin");
