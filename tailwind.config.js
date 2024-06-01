@@ -8,6 +8,7 @@ export default {
     extend: {
       height: {
         '800': '800px',
+        '350' : '350px',
         '500' : '500px',
         
        
