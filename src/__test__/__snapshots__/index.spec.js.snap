@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders Home component 1`] = `
+<div>
+  <div>
+    <div
+      class=" w-100% h-800 bg-[url('./assets/bg-1.jpg')] bg-cover"
+    >
+      <div
+        class="flex flex-col items-center justify-between px-4 py-8 sm:flex-row sm:px-24"
+      >
+        <a
+          href="/"
+        >
+          <div
+            class="w-40 h-12 mb-4 sm:mb-0"
+          >
+            <img
+              alt="logo"
+              src="test-file-stub"
+            />
+          </div>
+        </a>
+        <div
+          class="flex gap-4 text-white sm:gap-8"
+        >
+          <a
+            href="/register"
+          >
+            <h1
+              class="font-sans text-base font-semibold cursor-pointer sm:text-lg"
+            >
+              Sign Up
+            </h1>
+          </a>
+          <a
+            href="/login"
+          >
+            <h1
+              class="font-sans text-base font-semibold cursor-pointer sm:text-lg"
+            >
+              Sign in
+            </h1>
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex-col "
+      >
+        <div
+          class="h-500"
+        >
+          <div
+            class="flex items-center justify-center mt-10"
+          >
+            <div
+              class="flex flex-col items-center h-auto gap-10 px-4 leading-10 text-center"
+            >
+              <div
+                class="w-full font-sans sm:w-2/3 lg:w-1/2"
+              >
+                <h1
+                  class="text-4xl font-bold sm:text-4xl lg:text-6xl"
+                >
+                  <span
+                    class="text-yellow-400"
+                  >
+                    Create 
+                    <span
+                      class="text-white"
+                    >
+                      or
+                    </span>
+                     Find
+                  </span>
+                  <span
+                    class="block text-white"
+                  >
+                    interesting
+                  </span>
+                  <span
+                    class="text-yellow-400"
+                  >
+                    Events
+                  </span>
+                  <span
+                    class="block text-white"
+                  >
+                    around The world
+                  </span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-32 w-444 "
+    >
+      <div
+        class="pb-10 text-center"
+      >
+        <h1
+          class="font-sans text-5xl font-bold"
+        >
+          <span
+            class="text-yellow-700"
+          >
+            Our
+          </span>
+           
+          <span
+            class="text-cyan-800"
+          >
+            Mentor
+          </span>
+        </h1>
+      </div>
+      <div>
+        <div>
+          <div
+            class="flex flex-wrap justify-center gap-6 mx-4 my-8"
+          />
+          <div
+            class="flex justify-center space-x-4 mb-36"
+          >
+            <button
+              class="h-10 font-bold text-center text-white bg-cyan-800 w-24 rounded-2xl opacity-50 cursor-not-allowed undefined"
+              disabled=""
+            >
+              Back
+            </button>
+            <button
+              class="h-10 font-bold text-center text-white bg-cyan-800 w-24 rounded-2xl false undefined"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="bg-cyan-900"
+      >
+        <div
+          class="flex flex-col items-center justify-center px-4 py-8 text-white md:flex-row md:justify-between md:py-12 md:px-12 lg:px-24"
+        >
+          <div
+            class="w-full text-center md:w-2/5 lg:w-1/4 md:text-left"
+          >
+            <img
+              alt="logo"
+              class="w-48 h-12 md:w-60"
+              src="test-file-stub"
+            />
+            <p
+              class="my-2 text-sm text-center md:text-base md:text-left"
+            >
+              SeeEvent is a platform where you can create or find an amazing events around the world.
+            </p>
+            <p
+              class="mt-4 mb-2 font-bold "
+            >
+              Follow Us on
+            </p>
+            <div
+              class="flex justify-center gap-5 md:justify-start"
+            >
+              <img
+                alt="facebook"
+                class=""
+                src="test-file-stub"
+              />
+              <img
+                alt="instagram"
+                class=""
+                src="test-file-stub"
+              />
+              <img
+                alt="twitter"
+                class=""
+                src="test-file-stub"
+              />
+              <img
+                alt="youtube"
+                class=""
+                src="test-file-stub"
+              />
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-8 mt-8 md:justify-between md:gap-12 md:mt-0"
+          >
+            <div
+              class="w-1/2 md:w-auto"
+            >
+              <h1
+                class="mb-4 text-lg font-bold"
+              >
+                Links
+              </h1>
+              <p
+                class="mb-2 text-sm"
+              >
+                Home
+              </p>
+              <p
+                class="mb-2 text-sm"
+              >
+                Explore
+              </p>
+              <p
+                class="mb-2 text-sm"
+              >
+                My Events
+              </p>
+              <p
+                class="mb-2 text-sm"
+              >
+                Bookmarks
+              </p>
+            </div>
+            <div
+              class="w-1/2 md:w-auto"
+            >
+              <h1
+                class="mb-4 text-lg font-bold"
+              >
+                Top Categories
+              </h1>
+              <p
+                class="mb-2 text-sm"
+              >
+                Design
+              </p>
+              <p
+                class="mb-2 text-sm"
+              >
+                Photography
+              </p>
+              <p
+                class="mb-2 text-sm"
+              >
+                Development
+              </p>
+              <p
+                class="mb-2 text-sm"
+              >
+                Marketing
+              </p>
+            </div>
+            <div
+              class="w-full md:w-auto"
+            >
+              <h1
+                class="mb-4 text-lg font-bold"
+              >
+                Contact Us
+              </h1>
+              <p
+                class="mb-2 text-sm leading-loose text-center md:text-left"
+              >
+                Indonesia Jl. Planet Namek No. 123, Surabaya Telp : 083849420146 Email : Johndoe@seeevent.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-between px-4 py-6 text-white md:flex-row md:items-end md:py-8 md:px-12 lg:px-24"
+        >
+          <p
+            class="mb-4 text-sm md:mb-0"
+          >
+            © 2021 SeeEvent All rights reserved.
+          </p>
+          <div
+            class="flex gap-6 text-sm md:gap-10"
+          >
+            <p>
+              Privacy Policy
+            </p>
+            <p>
+              Terms of Service
+            </p>
+            <p>
+              Helps
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

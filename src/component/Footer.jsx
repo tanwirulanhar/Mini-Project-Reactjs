@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "../assets/logo2.png";
 import facebook from "../assets/icon/facebook.png";
 import instagram from "../assets/icon/Instagram.png";

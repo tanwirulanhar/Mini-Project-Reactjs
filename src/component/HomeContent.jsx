@@ -1,3 +1,4 @@
+import React from "react";
 const HomeContent = () => {
   return (
     <div className="flex items-center justify-center mt-10">
